@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #222;
+
+  background: linear-gradient(to top left, #2193b0 0%, #6dd5ed 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(15px);
+
+  border-radius: 1.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 1;
+  padding: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.5s;
+}
+
+.name {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #0077b6;
+
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background: linear-gradient(135deg, #00b4d8, #0096c7);
+
+  opacity: 0.85;
+  border-radius: 1rem;
+  color: #fff;
+
+  width: 65%;
+  padding: 2rem;
+
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #caf0f8;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: none;
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  padding: 0.8rem 2.5rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translate(-50%, -2px);
+}
+
+.btn:active {
+  transform: translate(-50%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--new {
+  top: 3rem;
+}
+
+.btn--roll {
+  top: 39rem;
+}
+
+.btn--hold {
+  top: 46rem;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16rem;
+
+  transform: translateX(-50%);
+  height: 10rem;
+
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.25);
+}
+
+.player--winner {
+  background-color: #023e8a;
+  color: white;
+}
+
+.player--winner .name {
+  color: #90e0ef;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
